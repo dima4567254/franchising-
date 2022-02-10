@@ -1,0 +1,296 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'libs';
+
+.logo {
+    width: 100px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__btn {
+        display: none
+    }
+
+    &__items {
+        display: flex;
+        gap: 0 30px;
+
+    }
+
+    &__link {
+        font-size: 14px;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom 0.5s;
+        outline-color: #000000;
+        outline-offset: 5px;
+        display: block;
+        color: #3D4143;
+        padding: 30px 0;
+        @include line-clamp-inline(1);
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            border-bottom: 3px solid #EB6924;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+.header {
+
+    &__top {
+        background-color: #f9f8f8;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        margin: 0 auto;
+        max-width: 1250px;
+    }
+
+    &__link {
+        display: inline-flex;
+    }
+
+    &__button {
+        padding: 30px 0;
+    }
+
+    &__tel {
+        display: flex;
+        align-items: center;
+        transition: color 0.5s;
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            color: $ac;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__svg {
+        margin-right: 10px;
+    }
+}
+
+.nav {
+    gap: 20px;
+    display: flex;
+
+    &__brand {
+        padding: 11px;
+        font-size: 14px;
+        color: $ac;
+        background-color: $white1;
+        border: 1px solid $ac;
+        @include line-clamp-inline(1);
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $ac;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__button {
+        padding: 9px;
+        border-radius: 3px;
+        font-size: 14px;
+        border: none;
+        color: $white;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ff9000), to(#ff6500));
+        transition: background-color 0.5s;
+        @include line-clamp-inline(1);
+
+
+        &:focus {
+            color: $green;
+        }
+
+        &:hover {
+
+            opacity: 0.8;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+}
+
+.hero {
+    padding-bottom: 50px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../images/icons/video-text.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 360px;
+        width: 300px;
+        z-index: 999;
+    }
+
+    &__video {
+        width: 1250px;
+        height: 55vh;
+        object-fit: cover;
+        position: relative;
+    }
+}
+
+.about {
+    padding: 50px 0;
+
+    &__title {
+        position: relative;
+        background-color: #eecf36;
+        display: block;
+        max-width: 275px;
+        margin: 0 auto;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: -10%;
+            transform: translateX(-50%);
+            height: 50px;
+            width: 110px;
+            background-image: url('../images/left-avtor.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -999;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: -85px;
+            // transform: translateX(-50%);
+            height: 50px;
+            width: 110px;
+            background-image: url('../images/right-befor.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            z-index: -999;
+        }
+    }
+}
+
+
+
+
+
+
+
+/*медия всегда должны быть в низу */
+
+
+/*
+
+&__link {
+    color: $title;
+    font-family: $;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    outline-color: #000000;
+    outline-offset: 5px;
+    transition: color 0.5s;
+    &:focus {
+        color: $green;
+    }
+
+    &:hover {
+        color: $ac;
+    }
+
+    &--active {
+        color: $ac;
+    }
+}
+
+*/
+
+/*.video {
+    height: 425px;
+    max-width: 1185px;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.7s,
+        border 0.5s;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &:focus {
+        outline: solid $ac;
+    }
+
+    &:hover {
+        opacity: 0.4;
+        border: 2px solid $black;
+    }
+
+    &:active {
+        color: $active;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url('../images/play.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 100px;
+    }
+}*/
+
+@import 'media';
