@@ -179,40 +179,28 @@
 
     &__title {
         position: relative;
-        background-color: #eecf36;
-        display: block;
-        max-width: 275px;
-        margin: 0 auto;
+        margin-bottom: 45px;
 
         &::before {
-            content: "";
-            position: absolute;
-            top: 0px;
-            left: -10%;
+            top: -10px;
+            left: 50%;
             transform: translateX(-50%);
             height: 50px;
-            width: 110px;
-            background-image: url('../images/left-avtor.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            z-index: -999;
+            width: 400px;
+            background-image: url('../images/yellow-stripe.png');
         }
+    }
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0px;
-            right: -85px;
-            // transform: translateX(-50%);
-            height: 50px;
-            width: 110px;
-            background-image: url('../images/right-befor.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            z-index: -999;
-        }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__text p {
+        padding-top: 40px;
+        width: 265px;
+        margin-bottom: 45px;
     }
 }
 
