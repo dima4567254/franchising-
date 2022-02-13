@@ -37,7 +37,7 @@
         @include line-clamp-inline(1);
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -59,13 +59,20 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 5px 0;
         margin: 0 auto;
         max-width: 1250px;
     }
 
+    &__social {
+        display: flex;
+        gap: 15px;
+    }
+
     &__link {
         display: inline-flex;
+        transition: background-color 0.5s;
     }
 
     &__button {
@@ -78,7 +85,7 @@
         transition: color 0.5s;
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -90,8 +97,26 @@
         }
     }
 
+    .surface1 q path {
+        &:hover {
+            fill: red;
+        }
+    }
+
     &__svg {
         margin-right: 10px;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover q path {
+            fill: red;
+        }
+
+        &:active {
+            color: $active;
+        }
     }
 }
 
@@ -108,7 +133,7 @@
         @include line-clamp-inline(1);
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
@@ -129,15 +154,13 @@
         color: $white;
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ff9000), to(#ff6500));
         transition: background-color 0.5s;
-        @include line-clamp-inline(1);
-
+        @include line-clamp-box(1);
 
         &:focus {
-            color: $green;
+            color: $focus;
         }
 
         &:hover {
-
             opacity: 0.8;
         }
 
@@ -147,31 +170,69 @@
     }
 }
 
+#container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
 .hero {
     padding-bottom: 50px;
     position: relative;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-image: url('../images/icons/video-text.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 360px;
-        width: 300px;
-        z-index: 999;
+
+
+    &__abs {
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
     }
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     background-image: url('../images/icons/video-text.svg');
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     height: 360px;
+    //     width: 300px;
+    //     z-index: 999;
+    // }
+
 
     &__video {
         width: 1250px;
         height: 55vh;
         object-fit: cover;
         position: relative;
+        z-index: -999;
     }
+
+    // &__svg {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     // background-image: url('../images/icons/video-text.svg');
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: cover;
+    //     height: 360px;
+    //     width: 300px;
+    //     z-index: 999;
+    // }
 }
 
 .about {
@@ -192,20 +253,165 @@
     }
 
     &__text {
+        width: 900px;
+        margin: auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
     &__text p {
-        padding-top: 40px;
+        // padding-top: 40px;
         width: 265px;
         margin-bottom: 45px;
+        position: relative;
+    }
+
+    &__svg {
+        margin-bottom: 10px;
     }
 }
 
+.statistic {
+    padding: 50px 0;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+        align-items: center;
+        width: 415px;
+        min-height: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: background-color 0.5s;
+        overflow: hidden;
+        position: relative;
+
+        // cursor: pointer;
+        // z-index: -999;
+        position: relative;
+        background-image: url('../images/tourist.jpg');
+        // background: $orange1;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            // opacity: 00.1;
+            // z-index: 999;
+            // background: $orange1;
+            // background: $orange1;
+            // background: rgba(0, 0, 0, 0.4);
+            // background-color: red;
+            opacity: 0.8;
+
+            // $orange1
+            // z-index: 999;
+
+            .statistic__content {
+                // visibility: initial;
+                // justify-content: center;
+                // flex-direction: column;
+                transform: translateY(70%);
+                transition: transform 1s;
+                opacity: 1;
+                z-index: 999;
+            }
 
 
+            .statistic__text {
+                display: none;
+            }
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__text {
+        color: $white;
+        min-width: 250px;
+
+
+        /*!*/
+    }
+
+    &__box {
+        padding-right: 40px;
+    }
+
+    &__arrow {
+        height: 1px;
+        width: 100%;
+        background-color: $white;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__number {
+        font-weight: bold;
+        font-size: 48px;
+        text-align: center;
+        display: block;
+        margin-bottom: 5px;
+        // margin-top: 7px;
+        // margin-bottom: 7px;
+    }
+
+    &__info {
+        padding-left: 40px;
+        white-space: nowrap;
+    }
+
+    &__content {
+        // visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        transform: translateY(500%);
+        color: #000000;
+        transition: transform 1s;
+        // z-index: 999;
+        background-color: red;
+        z-index: 1;
+        display: flex;
+    }
+}
+
+.car {
+    // background: $orange1;
+    // opacity: 0.8;
+    transition: background-color 0.5s;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    // transform: translateX(-50%);
+
+    &:focus {}
+
+    &:hover {
+        opacity: 0.8;
+        background: #eb6924;
+    }
+
+    &:active {
+        color: $active;
+    }
+}
 
 
 
