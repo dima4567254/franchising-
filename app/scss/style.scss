@@ -5,9 +5,13 @@
 @import 'libs';
 
 .logo {
-    width: 100px;
-    height: 30px;
-    object-fit: cover;
+
+
+    &__img {
+        width: 100px;
+        height: 30px;
+        object-fit: cover;
+    }
 }
 
 .menu {
@@ -65,60 +69,66 @@
         max-width: 1250px;
     }
 
-    &__social {
-        display: flex;
-        gap: 15px;
-    }
-
-    &__link {
-        display: inline-flex;
-        transition: background-color 0.5s;
-    }
-
     &__button {
         padding: 30px 0;
     }
 
-    &__tel {
-        display: flex;
-        align-items: center;
-        transition: color 0.5s;
 
-        &:focus {
-            color: $focus;
-        }
-
-        &:hover {
-            color: $ac;
-        }
-
-        &:active {
-            color: $active;
-        }
-    }
 
     .surface1 q path {
         &:hover {
             fill: red;
         }
     }
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+
+    &__link {
+        display: inline-flex;
+    }
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    transition: color 0.5s;
+
+    &:focus {
+        color: $focus;
+    }
+
+    &:hover {
+        color: $ac;
+    }
+
+    &:active {
+        color: $active;
+    }
 
     &__svg {
         margin-right: 10px;
 
-        &:focus {
-            color: $focus;
-        }
+        // &:focus {
+        //     color: $focus;
+        // }
 
-        &:hover q path {
-            fill: red;
-        }
+        // &:hover q path {
+        //     fill: red;
+        // }
 
-        &:active {
-            color: $active;
-        }
+        // &:active {
+        //     color: $active;
+        // }
     }
 }
+
+
+
+
+
 
 .nav {
     gap: 20px;
@@ -230,10 +240,13 @@
     }
 
     &__text p {
-        // padding-top: 40px;
         width: 265px;
         margin-bottom: 45px;
         position: relative;
+    }
+
+    &__text span {
+        font-weight: 700;
     }
 
     &__svg {
@@ -262,10 +275,10 @@
         transition: background-color 0.5s;
         overflow: hidden;
         position: relative;
-
+        cursor: pointer;
         // cursor: pointer;
         // z-index: -999;
-    
+
         // background: $orange1;
 
         &:focus {
@@ -279,7 +292,7 @@
             // background: $orange1;
             // background: rgba(0, 0, 0, 0.4);
             // background-color: red;
-            opacity: 0.8;
+            // opacity: 0.8;
 
             // $orange1
             // z-index: 999;
@@ -288,16 +301,50 @@
                 // visibility: initial;
                 // justify-content: center;
                 // flex-direction: column;
-                transform: translateY(70%);
+                transform: translateY(0%);
                 transition: transform 1s;
                 opacity: 1;
                 z-index: 999;
+                // background: #eb6924;
+                // height: 100%;
+                // width: 100%;
+
             }
 
 
             .statistic__text {
                 display: none;
             }
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__flex {
+        // background: $orange1;
+        // opacity: 0.8;
+        transition: background-color 0.5s;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        // transform: translateX(-50%);
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            opacity: 0.8;
+            background: $orange1;
         }
 
         &:active {
@@ -342,44 +389,55 @@
 
     &__content {
         // visibility: hidden;
-        opacity: 0;
+        padding: 70px;
+        display: flex;
         text-align: center;
+        flex-direction: column;
+        justify-content: center;
         transform: translateY(999%);
         color: $white;
         transition: transform 1s;
         // z-index: 999;
-        z-index: 1;
+        opacity: 00.8;
+
+
+
+        // background: $orange1;
+
+    }
+}
+
+.conditions {
+
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__wrapper {
         display: flex;
+        justify-content: space-between;
     }
+
+    .conditions__item {}
+
+    .conditions__inner {}
+
+    .conditions__number {}
+
+    .conditions__right {}
+
+    .conditions__subtitle {}
+
+    .conditions__text {}
 }
 
-.car {
-    // background: $orange1;
-    // opacity: 0.8;
-    transition: background-color 0.5s;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    // transform: translateX(-50%);
+#map {
+    height: 335px;
+    width: 500px;
 
-    &:focus {}
-
-    &:hover {
-        opacity: 0.8;
-        background: #eb6924;
-    }
-
-    &:active {
-        color: $active;
-    }
 }
+
+
+
 
 
 
