@@ -182,36 +182,6 @@
     padding-bottom: 50px;
     position: relative;
 
-
-
-    &__abs {
-        height: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-    }
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     background-image: url('../images/icons/video-text.svg');
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     height: 360px;
-    //     width: 300px;
-    //     z-index: 999;
-    // }
-
-
     &__video {
         width: 1250px;
         height: 55vh;
@@ -220,19 +190,18 @@
         z-index: -999;
     }
 
-    // &__svg {
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     // background-image: url('../images/icons/video-text.svg');
-    //     background-position: center;
-    //     background-repeat: no-repeat;
-    //     background-size: cover;
-    //     height: 360px;
-    //     width: 300px;
-    //     z-index: 999;
-    // }
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 360px;
+        width: 300px;
+        z-index: 999;
+    }
 }
 
 .about {
@@ -296,8 +265,7 @@
 
         // cursor: pointer;
         // z-index: -999;
-        position: relative;
-        background-image: url('../images/tourist.jpg');
+    
         // background: $orange1;
 
         &:focus {
@@ -339,10 +307,7 @@
 
     &__text {
         color: $white;
-        min-width: 250px;
-
-
-        /*!*/
+        width: 250px;
     }
 
     &__box {
@@ -379,11 +344,10 @@
         // visibility: hidden;
         opacity: 0;
         text-align: center;
-        transform: translateY(500%);
-        color: #000000;
+        transform: translateY(999%);
+        color: $white;
         transition: transform 1s;
         // z-index: 999;
-        background-color: red;
         z-index: 1;
         display: flex;
     }
@@ -399,6 +363,10 @@
     position: absolute;
     left: 0%;
     top: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     // transform: translateX(-50%);
 
     &:focus {}
