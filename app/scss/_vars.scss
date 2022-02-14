@@ -9,8 +9,14 @@ $ac: #ff8000;
 $focus:#14B4BE;
 $white: #FFFFFF;
 $white1:#fff2e5;
+$white2:#f0f0f0;
+
 $black: #000000;
+$black1: #4a4a4a;
+
 $title: #436372;
+$green1: #aadc77;
+$green2:#d2ecb9;
 
 @mixin line-clamp-box($line-clamp, ) {
     display: -webkit-box;

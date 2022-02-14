@@ -6,3 +6,13 @@
 	font-weight:400;
 	font-style:normal;
 ;}
+
+@font-face {
+	font-family: 'pfsquaresanspro';
+	font-display: swap;
+	src: url("../fonts/pfsquaresanspro-medium.woff2") format("woff2"),
+		url("../fonts/pfsquaresanspro-medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	;
+}
