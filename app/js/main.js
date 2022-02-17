@@ -1,5 +1,19 @@
 $(function name(params) {
 
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        loop: true,
+        loopedslides: 1,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+  
+
+    var mixer = mixitup('.slider-content');
+
 
 
     /*	$(".menu a").on("click", function (event) {

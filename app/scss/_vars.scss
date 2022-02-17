@@ -1,22 +1,41 @@
 $Rubik: 'Rubik',
 sans-serif;
 
-
-$orange: #FF9900;
-$orange1: #eb6924;
 $active: #fb0909;
 $ac: #ff8000;
 $focus:#14B4BE;
+$title: #436372;
+
+$orange: #FF9900;
+$orange1: #eb6924;
+$orange2: #ff6500;
+
 $white: #FFFFFF;
 $white1:#fff2e5;
 $white2:#f0f0f0;
+$white3:#f6f7f8;
+$white4:#f4f8fe;
+$white5:#cdd4dc;
+
+$silver:#858585;
+$silver1:#f0f0f0;
+$silver2:#eeeeee;
+$silver3:#7b7b7b;
+$silver4:#f7f7f7;
+
+
+
+
 
 $black: #000000;
 $black1: #4a4a4a;
+$black2: #3d4143;
 
-$title: #436372;
 $green1: #aadc77;
 $green2:#d2ecb9;
+$green3:#0cab46;
+$green4:#8aab64;
+
 
 @mixin line-clamp-box($line-clamp, ) {
     display: -webkit-box;
