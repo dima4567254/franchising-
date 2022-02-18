@@ -41,12 +41,18 @@ function styles() {
 }
 
 
+
+
 function scripts() {
     return src([
             'node_modules/jquery/dist/jquery.js',
             'node_modules/mixitup/dist/mixitup.js',
             'node_modules/swiper/swiper-bundle.js',
             'node_modules/dragscroll/dragscroll.js',
+
+            // 'node_modules/prettify/prettify.js',
+            // 'node_modules/jquery.scrollbar.js',
+
             'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
             /*'node_modules/swiper/swiper-bundle.min.js.map',
             'node_modules/slick-carousel/slick/slick.js',

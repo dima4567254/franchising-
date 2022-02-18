@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="https://yoursite.ru/favicon.png" type="image/x-icon">
     <title>Франчайзинг</title>
+    <link rel="stylesheet" href="css/prettify.css" />
+    <link rel="stylesheet" href="includes/style.css">
+    <link rel="stylesheet" href="includes/prettify/prettify.css">
+    <link rel="stylesheet" href="jquery.scrollbar.css">
+
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -189,8 +195,6 @@
 
 
     </header>
-
-
 
     <main class="main">
         <section class="about">
@@ -901,13 +905,13 @@
                 <div class="reviews__wrapper dragscroll d">
                     <div class="reviews__inner">
                         <img class="reviews__img" src="images/reviews/reviews-1.jpg" alt="отзыв">
-                        <div class="reviews__review">
+                        <div class="reviews__review demo">
                             <h3 class="reviews__title">Ирина Коваль</h3>
                             <div class="reviews__adress">
                                 <!--у-->
                                 Join Up! в Киеве на ул. Борщаговская, 210
                             </div>
-                            <div class="reviews__text mCustomScrollbar" data-mcs-theme="dark">
+                            <div class="reviews__text demo" id="demo1">
                                 <p>
                                     Лично для меня Join Up! to travel – это любовь во всех ее проявлениях. Это дружба,
                                     когда есть на кого положиться и есть уверенность, что ты не один. Это любимая
@@ -919,13 +923,13 @@
                         </div>
                     </div>
                     <div class="reviews__inner">
-                        <div class="reviews__review">
+                        <div class="reviews__review demo">
                             <h3 class="reviews__title">Вячеслав Нездимовский</h3>
                             <div class="reviews__adress">
                                 <!--у-->
                                 Join Up! в Киеве на ул. Игната Юры, 20
                             </div>
-                            <div class="reviews__text">
+                            <div class="reviews__text demo" id="demo2">
                                 <p>
                                     Для нас Join Up! – это надежный и проверенный годами партнер. Карьерный и личный
                                     рост,
@@ -941,13 +945,13 @@
 
                     <div class="reviews__inner">
                         <img class="reviews__img" src="images/reviews/reviews-3.jpg" alt="отзыв">
-                        <div class="reviews__review">
+                        <div class="reviews__review demo">
                             <h3 class="reviews__title">Ольга Кусик</h3>
                             <div class="reviews__adress">
                                 <!--у-->
                                 Join Up! в Кривом Роге по просп. Металлургов, 38
                             </div>
-                            <div class="reviews__text">
+                            <div class="reviews__text demo" id="demo3">
                                 <p>
                                     Некоторое время назад я поверила молодым людям, которые, и это самое главное, до
                                     последней
@@ -964,13 +968,13 @@
                     </div>
                     <div class="reviews__inner">
 
-                        <div class="reviews__review">
+                        <div class="reviews__review demo">
                             <h3 class="reviews__title">Юлия Сидоренко</h3>
                             <div class="reviews__adress">
                                 <!--у-->
                                 Join Up! в Сумах на Покровской площади
                             </div>
-                            <div class="reviews__text">
+                            <div class="reviews__text demo">
                                 <p>
                                     Поддержка всегда и во всем. Даже самая безумная идея может ожить в ваших руках. С
                                     Join
@@ -986,13 +990,13 @@
                     </div>
                     <div class="reviews__inner">
                         <img class="reviews__img" src="images/reviews/reviews-5.jpg" alt="отзыв">
-                        <div class="reviews__review">
+                        <div class="reviews__review demo">
                             <h3 class="reviews__title">Катерина Стерпул</h3>
                             <div class="reviews__adress">
                                 <!--у-->
                                 Join Up! в Кропивницком на ул. Чмиленко, 79
                             </div>
-                            <div class="reviews__text" id="mcs_container">
+                            <div class="reviews__text demo">
                                 <p>
                                     Для меня Join Up! to travel – это компания, которая постоянно растет и развивается,
                                     двигается вперед и достигает новых целей. Важным условиям успеха Join Up! to travel
@@ -1159,7 +1163,14 @@
         }
     </script>
 
- 
+    <script src="js/prettify.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script type="text/javascript" src="includes/prettify/prettify.js"></script>
+    <script type="text/javascript" src="includes/jquery.js"></script>
+    <script type="text/javascript" src="jquery.scrollbar.js"></script>
+
+
     <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" async>
     </script>
     <script src="js/main.min.js"></script>
