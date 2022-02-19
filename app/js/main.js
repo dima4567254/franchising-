@@ -14,6 +14,7 @@ $(function name(params) {
         jQuery('.scrollbar-inner').scrollbar();
     });
 
+    $('.product-detalis__input').styler();
 
     var mixer = mixitup('.slider-content');
 

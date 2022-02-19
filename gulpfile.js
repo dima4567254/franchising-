@@ -49,7 +49,7 @@ function scripts() {
             'node_modules/mixitup/dist/mixitup.js',
             'node_modules/swiper/swiper-bundle.js',
             'node_modules/dragscroll/dragscroll.js',
-
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
             // 'node_modules/prettify/prettify.js',
             // 'node_modules/jquery.scrollbar.js',
 
@@ -60,7 +60,7 @@ function scripts() {
                         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
                        
                         'node_modules/rateyo/src/jquery.rateyo.js',                    
-                        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+                        
                         */
             'app/js/main.js'
         ])

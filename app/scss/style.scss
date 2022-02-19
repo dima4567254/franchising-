@@ -5,8 +5,6 @@
 @import 'libs';
 
 .logo {
-
-
     &__img {
         width: 100px;
         height: 30px;
@@ -15,10 +13,15 @@
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: $white;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1250px;
+        margin: auto;
+    }
 
     &__btn {
         display: none
@@ -190,7 +193,6 @@
 }
 
 .hero {
-    padding-bottom: 50px;
     position: relative;
 
     &__video {
@@ -217,6 +219,7 @@
 
 .about {
     padding: 50px 0;
+    // background-color: $white;
 
     &__title {
         position: relative;
@@ -284,6 +287,14 @@
         position: relative;
         cursor: pointer;
 
+
+
+        transition: background-color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
         &:hover {
             .statistic__background {
                 opacity: 0.8;
@@ -299,9 +310,11 @@
                 visibility: hidden;
             }
         }
+
+        &:active {
+            color: $active;
+        }
     }
-
-
 
     &__content {
         width: 80%;
@@ -485,6 +498,14 @@
         border-bottom: 1px solid $white2;
         padding: 20px 20px;
         justify-content: space-between;
+
+
+
+    }
+
+    .conditions__inner {
+        display: flex;
+        align-items: center;
         position: relative;
 
         &::before {
@@ -495,11 +516,6 @@
             height: 10px;
             width: 10px;
         }
-    }
-
-    .conditions__inner {
-        display: flex;
-        align-items: center;
     }
 }
 
@@ -669,6 +685,9 @@
 
 .create-office {
     padding-top: 100px;
+    max-width: 1250px;
+    margin: auto;
+    background-color: $white;
 
     /*возможно разделить*/
     &__title {
@@ -795,6 +814,7 @@
         border-top: 1px solid $silver1;
         border-bottom: 1px solid $silver1;
         margin-bottom: 30px;
+
     }
 
     &__item {
@@ -820,6 +840,8 @@
     &__btn {
         background-color: transparent;
         border: none;
+        padding: 0;
+        /*откуда*/
 
     }
 }
@@ -830,47 +852,168 @@
 }
 
 .slider-content {
-    &__item {
-        width: 295px;
-        /*!*/
-        height: 295px;
-        // padding: 50px 75px;
-        background-color: $white;
-        border: 1px solid $silver2;
-        cursor: pointer;
-        // margin-bottom: 35px;
-    }
 
-    &__img {
-        width: 295px;
-        height: 295px;
-        object-fit: none;
-    }
+    &__items {
 
-    &__swiper {
-        width: 960px;
-        /*960*/
-        margin: auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 35px 30px;
-        margin-bottom: 80px;
+        width: 960px;
+        padding-bottom: 80px;
+        margin: auto;
+    }
+
+    &__item {
+        width: 295px;
+        /*!*/
+        height: 295px;
+        background-color: $white;
+        border: 1px solid $silver2;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        // overflow: hidden;
+
+        &:hover {
+
+            .slider-content {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .slider-content__images {
+                transform: translateZ(-1%);
+                width: 200px;
+                height: 200px;
+            }
+
+            .slider-content__name {
+                padding-left: 10px;
+            }
+        }
+
+
+
+
+    }
+
+    // &__inner {
+    //     visibility: hidden;
+    //     opacity: 0;
+    // }
+
+    &__images {
+        transition: all 5s;
+        transform: translateZ(0%);
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        /*25.22*/
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-weight: 500;
+        // max-width: 200px;
+    }
+
+    &__box {
+        font-weight: 500;
+        color: $orange1;
     }
 }
 
+.product-detalis {
+    &__input {
+        width: 25px;
+        height: 22px;
+    }
+}
 
-.swiper-wrapper {
-    height: 660px;
-    width: 960px;
-    margin: auto;
+.jq-number__field {
+    width: 25px;
+    height: 21px;
+}
+
+.jq-number__spin {
+    //     top: 0;
+    //    right: 25px;
+    width: 8px;
+    height: 21px;
+    right: 4px;
+    border-radius: 0px;
+}
 
 
+.jq-number__spin.minus:after {
+    top: 8px;
+    left: -2px;
+    // left: -1px;
+}
+
+.jq-number__spin:after {
+    left: 0px;
+    top: 7px;
+    // left: -1px;
+    transform: rotate(90deg)
+}
+
+.jq-number__spin .plus {
+    left: 26px;
+}
+
+
+.jq-number__spin.minus {
+    left: -9px;
+    top: 0;
+}
+
+.jq-number {
+    padding: 0 15px 0 0;
 }
 
 .swiper {
-    width: 960px;
+    // height: 660px;
+    // width: 960px;
+    // margin: auto;
+    // background-color: $white;
 }
+
+.swiper-div {}
+
+
+// .swiper-button {
+//     position: absolute;
+//     left: 5%;
+// }
+
+// .swiper-button-next,
+// .swiper-rtl .swiper-button-prev {
+//     right: 10px;
+//     left: auto;
+// }
+
+// .swiper-button-prev,
+// .swiper-rtl .swiper-button-next {
+//     left: 10px;
+//     right: auto;
+// }
+
+.swiper-wrapper {}
 
 
 .swiper-button-prev,
@@ -960,6 +1103,7 @@
 
 
 .cooperation {
+
     &__title {
         padding: 34px;
         margin-bottom: 20px;
@@ -983,9 +1127,145 @@
 
     }
 
+    &__images {
+        max-width: 960px;
+        margin: auto;
+
+    }
+
     &__img {
         max-width: 960px;
         height: 333px;
+
+    }
+
+    &__background {
+        background-color: $white;
+    }
+}
+
+.vacancies {
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+
+
+    &__background {
+        background-image: url('../images/vacancy-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 55vh;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 520px;
+            width: 355px;
+            background-image: url('../images/vacancies/vacancy-hands.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -59px;
+            left: 32px;
+            height: 250px;
+            width: 220px;
+            background-image: url('../images/vacancies/vacancy-tel.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100px;
+            height: 300px;
+            width: 230px;
+            background-image: url('../images/vacancies/vacancy-purse.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        
+
+    }
+
+    &__title {
+        padding: 34px;
+        margin-bottom: 20px;
+        position: relative;
+        font-weight: 700;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-top: 90px;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 560px;
+            height: 100px;
+            background-image: url('../images/yellow-stripe.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+
+    }
+
+    &__text {
+        color: $black1;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        padding: 25px 133px;
+        font-weight: 500;
+        text-align: center;
+        background-color: $white;
+        border: none;
+        color: $black3;
+        display: flex;
+        margin: 0 auto;
+        transition: background-color 0.5s,
+            color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            background-color: $orange1;
+            color: $white;
+        }
+
+        &:active {
+            color: $active;
+        }
     }
 }
 
@@ -1000,172 +1280,10 @@
 
 
 
-/*************** SCROLLBAR BASE CSS ***************/
-
-.scroll-wrapper {
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: relative;
-}
-
-.scroll-wrapper>.scroll-content {
-    border: none !important;
-    box-sizing: content-box !important;
-    height: auto;
-    left: 0;
-    margin: 0;
-    max-height: none;
-    max-width: none !important;
-    overflow: scroll !important;
-    padding: 0;
-    position: relative !important;
-    top: 0;
-    width: auto !important;
-}
-
-.scroll-wrapper>.scroll-content::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-}
-
-.scroll-element {
-    display: none;
-}
-
-.scroll-element,
-.scroll-element div {
-    box-sizing: content-box;
-}
-
-.scroll-element.scroll-x.scroll-scrollx_visible,
-.scroll-element.scroll-y.scroll-scrolly_visible {
-    display: block;
-}
-
-.scroll-element .scroll-bar,
-.scroll-element .scroll-arrow {
-    cursor: default;
-}
-
-.scroll-textarea {
-    border: 1px solid #cccccc;
-    border-top-color: #999999;
-}
-
-.scroll-textarea>.scroll-content {
-    overflow: hidden !important;
-}
-
-.scroll-textarea>.scroll-content>textarea {
-    border: none !important;
-    box-sizing: border-box;
-    height: 100% !important;
-    margin: 0;
-    max-height: none !important;
-    max-width: none !important;
-    overflow: scroll !important;
-    outline: none;
-    padding: 2px;
-    position: relative !important;
-    top: 0;
-    width: 100% !important;
-}
-
-.scroll-textarea>.scroll-content>textarea::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-}
 
 
 
 
-/*************** SIMPLE INNER SCROLLBAR ***************/
-
-.scrollbar-inner>.scroll-element,
-.scrollbar-inner>.scroll-element div {
-    border: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 10;
-}
-
-.scrollbar-inner>.scroll-element div {
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-.scrollbar-inner>.scroll-element.scroll-x {
-    bottom: 2px;
-    height: 8px;
-    left: 0;
-    width: 100%;
-}
-
-.scrollbar-inner>.scroll-element.scroll-y {
-    height: 100%;
-    right: 2px;
-    top: 0;
-    width: 8px;
-}
-
-.scrollbar-inner>.scroll-element .scroll-element_outer {
-    overflow: hidden;
-}
-
-.scrollbar-inner>.scroll-element .scroll-element_outer,
-.scrollbar-inner>.scroll-element .scroll-element_track,
-.scrollbar-inner>.scroll-element .scroll-bar {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-}
-
-.scrollbar-inner>.scroll-element .scroll-element_track,
-.scrollbar-inner>.scroll-element .scroll-bar {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-    opacity: 0.4;
-}
-
-.scrollbar-inner>.scroll-element .scroll-element_track {
-    background-color: #e0e0e0;
-}
-
-.scrollbar-inner>.scroll-element .scroll-bar {
-    background-color: #c2c2c2;
-}
-
-.scrollbar-inner>.scroll-element:hover .scroll-bar {
-    background-color: #919191;
-}
-
-.scrollbar-inner>.scroll-element.scroll-draggable .scroll-bar {
-    background-color: #919191;
-}
-
-
-/* update scrollbar offset if both scrolls are visible */
-
-.scrollbar-inner>.scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
-    left: -12px;
-}
-
-.scrollbar-inner>.scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
-    top: -12px;
-}
-
-
-.scrollbar-inner>.scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
-    left: -12px;
-}
-
-.scrollbar-inner>.scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
-    top: -12px;
-}
 
 .permanent {
     width: 950px;
