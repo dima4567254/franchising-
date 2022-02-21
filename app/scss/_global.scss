@@ -14,6 +14,7 @@ body {
     flex-direction: column;
     background-color: #f7f7f7;
 }
+
 /*проверить потом*/
 
 .sr-only {
@@ -29,22 +30,26 @@ body {
 }
 
 .title {
-    text-align: center;
     z-index: 999;
     font-weight: 500;
     font-size: 28px;
     color: $black;
     text-transform: uppercase;
-    @include line-clamp-box(3);
+    text-align: center;
+    z-index: 999;
+    
+    // @include line-clamp-one(400px);
+    // @include line-clamp-inline(1);
+    // margin: 0 auto;
 
-    &::before {
-        content: "";
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        z-index: -999;
-    }
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     background-size: contain;
+    //     z-index: -999;
+    // }
 }
 
 .main {
@@ -55,7 +60,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 15px;
-    
+
     &--sm {
         max-width: 960px;
     }

@@ -52,6 +52,14 @@ $green4:#8aab64;
     overflow: hidden;
 }
 
+@mixin line-clamp-one($max-width, ) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: $max-width;
+}
+
 
 /*$ac: #fcd7b6;
 
