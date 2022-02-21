@@ -259,7 +259,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 45px 0;
-        margin-bottom: 50px;
+        margin-bottom: 100px;/*50*/
     }
 
     &__text p {
@@ -408,7 +408,7 @@
 
     &__background {
         background-color: $white;
-        padding-top: 50px;
+        padding-top: 100px;/*50*/
     }
 
     &::before {
@@ -427,7 +427,7 @@
 
     &__title {
         margin-bottom: 30px;
-        padding-top: 50px;
+        padding-top: 100px;/**/
         position: relative;
         // padding: 34px 0;
         z-index: 999;
@@ -460,7 +460,6 @@
 
     .conditions__item {
         width: 320px;
-
     }
 
     .conditions__inner {
@@ -547,13 +546,13 @@
 }
 
 .packages {
-    padding-top: 50px;
+    padding-top: 100px;/*50*/
 
     &__items {
         display: flex;
         justify-content: space-around;
 
-        padding-bottom: 50px;
+        padding-bottom: 100px;/*50*/
     }
 
     &__item {
@@ -600,7 +599,7 @@
 
     &__list {
         margin-bottom: 5px;
-        padding: 0 65px;
+        padding: 0 100px;/*65!*/
         // width: 80%;
         // margin: 0 auto;
         margin-bottom: auto;
@@ -689,7 +688,7 @@
     padding-top: 30px;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;/*50*/
 
     &__box {
         display: flex;
@@ -711,7 +710,7 @@
 }
 
 .create-office {
-    padding-top: 100px;
+    padding-top: 100px;/*100*/
     max-width: 1250px;
     margin: auto;
     background-color: $white;
@@ -885,7 +884,7 @@
         flex-wrap: wrap;
         gap: 35px 30px;
         width: 960px;
-        padding-bottom: 80px;
+        padding-bottom: 100px;/*80*/
         margin: auto;
     }
 
@@ -1107,7 +1106,7 @@
 .reviews {
     &__background {
         background-color: white;
-        padding-bottom: 50px;
+        padding-bottom: 100px;/*50*/
     }
 
     &__title {
@@ -1199,12 +1198,12 @@
 .cooperation {
 
     &__background {
-        padding-top: 50px;
+        padding-top: 100px;/*50*/
         background-color: $white;
     }
 
     &__title {
-        margin-bottom: 70px;
+        margin-bottom: 70px;/*70*/
         position: relative;
         font-weight: 700;
 
@@ -1263,8 +1262,6 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-
-
         }
 
         &::after {
@@ -1326,7 +1323,7 @@
         color: $black1;
         font-size: 20px;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 100px;/*50*/
     }
 
     &__box {
@@ -1392,11 +1389,11 @@
 }
 
 .footer {
-    padding-top: 100px;
+    padding-top: 100px;/*100*/
 
     &__inner {
         display: flex;
-        padding-bottom: 50px;
+        padding-bottom: 100px;/*50*/
         justify-content: space-between;
     }
 
