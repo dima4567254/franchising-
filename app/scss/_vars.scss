@@ -1,6 +1,10 @@
 $Rubik: 'Rubik',
 sans-serif;
 
+$pfsquaresanspro: 'pfsquaresanspro',sans-serif;
+
+
+
 $active: #fb0909;
 $ac: #ff8000;
 $focus:#14B4BE;
@@ -16,12 +20,24 @@ $white2:#f0f0f0;
 $white3:#f6f7f8;
 $white4:#f4f8fe;
 $white5:#cdd4dc;
+$white6:#f9f8f8;
+$white7:#fbfbfb;
+$white8:#efefef;
+
+
+
+
 
 $silver:#858585;
 $silver1:#f0f0f0;
 $silver2:#eeeeee;
 $silver3:#7b7b7b;
 $silver4:#f7f7f7;
+$silver5:#737c80;
+$silver6:#cfcfcf;
+$silver7:#ededed;
+
+
 
 
 
@@ -36,6 +52,11 @@ $green1: #aadc77;
 $green2:#d2ecb9;
 $green3:#0cab46;
 $green4:#8aab64;
+
+$section:100px;/*100*/
+$title-margin: 30px;
+
+
 
 
 @mixin line-clamp-box($line-clamp, ) {

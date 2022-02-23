@@ -7,7 +7,7 @@ body {
     // font-size: 16px;
     // line-height: 1;
     // color: $default;
-    font-family: $Rubik;
+    font-family: $pfsquaresanspro;
     font-weight: 400;
     // letter-spacing: 0.6px;
     display: flex;
@@ -36,8 +36,8 @@ body {
     color: $black;
     text-transform: uppercase;
     text-align: center;
-    z-index: 999;
-    
+    z-index: 1;
+
     // @include line-clamp-one(400px);
     // @include line-clamp-inline(1);
     // margin: 0 auto;
