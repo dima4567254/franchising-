@@ -28,6 +28,13 @@ $(function name(params) {
         theme: "dark-2"
     });
 
+     $('.menu__btn').on('click', function () {
+         $('.menu__items').toggleClass('menu__items--active');
+
+         /*$('.header__logo').toggleClass('menu__list--active');
+         $('.intro__btn').toggleClass('menu__list--active');*/
+     });
+
     // var $header = $(".header")
     // var scroll = 0
     // var active = "active"

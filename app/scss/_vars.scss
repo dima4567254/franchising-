@@ -1,7 +1,8 @@
 $Rubik: 'Rubik',
 sans-serif;
 
-$pfsquaresanspro: 'pfsquaresanspro',sans-serif;
+$pfsquaresanspro: 'pfsquaresanspro',
+sans-serif;
 
 
 
@@ -37,12 +38,6 @@ $silver5:#737c80;
 $silver6:#cfcfcf;
 $silver7:#ededed;
 
-
-
-
-
-
-
 $black: #000000;
 $black1: #4a4a4a;
 $black2: #3d4143;
@@ -53,10 +48,30 @@ $green2:#d2ecb9;
 $green3:#0cab46;
 $green4:#8aab64;
 
-$section:100px;/*100*/
+$section:100px;
+/*100*/
 $title-margin: 30px;
 
 
+
+@mixin media-section($se1200, $se992, $se768, $se575) {
+
+    @media (max-width: 1200px) {
+        margin-bottom: $ce1200;
+    }
+
+    @media (max-width: 992px) {
+        margin-bottom: $ce992;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: $ce768;
+    }
+
+    @media (max-width: 576px) {
+        margin-bottom: $ce575;
+    }
+}
 
 
 @mixin line-clamp-box($line-clamp, ) {
